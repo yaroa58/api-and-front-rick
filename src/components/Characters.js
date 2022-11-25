@@ -1,6 +1,7 @@
 import React from "react";
 
-const Characters = ({ characters = [] }) => {
+
+const Characters = ({ characters = [] }) => { //array personajes
     return (
         <div className="row">
             {

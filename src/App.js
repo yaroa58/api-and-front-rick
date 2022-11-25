@@ -8,7 +8,7 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
 
-
+  // llamando los personajes con fectch retornando promesa
   const initialUrl = "https://rickandmortyapi.com/api/character";
   const fetchCharacters = (url) => {
     fetch(url)
@@ -20,7 +20,7 @@ function App() {
       .catch(error => console.log(error))
 
   };
-
+  // traer nuevos personajes en new url  por cada pagina
   const onPrevious = () => {
     fetchCharacters(info.prev)
   }
@@ -34,11 +34,15 @@ function App() {
   useEffect(() => {
     fetchCharacters(initialUrl);
   }, [])
+
+  // nav bar rick and morti crear grid para vard y paginacion next and prevous
   return (
     <>
       <Navbar brand="Rick And Morty App" />
       <div className='container mt-5'>
-        <Pagination prev={info.prev} next={info.next}
+        <Pagination
+          prev={info.prev}
+          next={info.next}
           onPrevious={onPrevious}
           onNext={onNext} />
         <Characters characters={characters} />

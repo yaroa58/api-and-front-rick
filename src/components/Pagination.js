@@ -2,6 +2,8 @@ import React from "react";
 
 const Pagination = ({ prev, next, onPrevious, onNext }) => {
 
+    // ejecucion de eventos pagina onnext and onprevous
+
     const handlePrevious = () => {
         onPrevious();
     }
@@ -12,7 +14,7 @@ const Pagination = ({ prev, next, onPrevious, onNext }) => {
         <nav className="my-5">
             <ul className="pagination justify-content-center">
                 {
-                    prev ?
+                    prev ? //mostrar botton prevous y hay info atras de pagina
                         <li className="page-item">
                             <button className="page-link" onClick={handlePrevious}>Prev</button>
                         </li>

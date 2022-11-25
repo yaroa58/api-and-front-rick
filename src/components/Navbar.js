@@ -1,5 +1,6 @@
 import React from 'react';
 
+// estilizando mavbar con mayuscula, bg y brand (props)
 const Navbar = ({ brand }) => {
     return (
         <nav className="navbar navbar-dark bg-dark">
